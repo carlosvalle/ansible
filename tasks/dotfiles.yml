@@ -3,6 +3,7 @@
   tags:
     - install
     - dotfiles
+    - dotfiles-test
 - name: Cloning .dotfiles
   become_user: "{{ ansible_env.SUDO_USER }}"
   ansible.builtin.git:
@@ -15,9 +16,11 @@
   tags:
     - install
     - dotfiles
+    - dotfiles-test
 - name: Stow dotfiles
   become_user: "{{ ansible_env.SUDO_USER }}"
   shell: cd $HOME/.dotfiles && ./ubuntu
   tags:
     - install
     - dotfiles
+    - dotfiles-test
