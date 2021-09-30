@@ -1,0 +1,4 @@
+- name: Template a file
+  ansible.builtin.template:
+    src: template.j2
+    dest: ~/template.md
