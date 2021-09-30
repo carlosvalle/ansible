@@ -6,7 +6,9 @@
     - dotfiles
     - zsh
 - name: Change shell to zsh
-  shell: chsh -s $(which zsh)
+  ansible.builtin.user:
+    name: "{{ ansible_env.SUDO_USER }}"
+    shell: $(which zsh)
   tags:
     - install
     - dotfiles
