@@ -4,6 +4,7 @@
     - install
     - dotfiles
 - name: Cloning .dotfiles
+  become_user: "{{ ansible_env.SUDO_USER }}"
   ansible.builtin.git:
     repo: 'https://github.com/carlosvalle/dotfiles.git'
     dest: "{{ lookup('env', 'HOME') }}/.dotfiles"
@@ -15,6 +16,7 @@
     - install
     - dotfiles
 - name: Stow dotfiles
+  become_user: "{{ ansible_env.SUDO_USER }}"
   shell: cd $HOME/.dotfiles && ./ubuntu
   tags:
     - install
