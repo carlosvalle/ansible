@@ -20,7 +20,6 @@
     - productivity
     - dotfiles
     - zsh
-    - local-zsh
 - name: Install zsh-autosuggestions
   become_user: "{{ ansible_env.SUDO_USER }}"
   ansible.builtin.git:
@@ -31,4 +30,3 @@
     - productivity
     - dotfiles
     - zsh
-    - local-zsh
