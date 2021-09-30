@@ -2,3 +2,5 @@
   ansible.builtin.template:
     src: template.j2
     dest: ~/template.md
+  tags:
+    - template
